@@ -1,0 +1,122 @@
+<!-- Toolbar -->
+<div class="container">
+  <div class="toolbar" role="banner">
+    <div class="container-fluid">
+      <div class="row mt-3 d-flex">
+        <div class="col-md-2"><h1>Create Note</h1></div>
+        <div class="col-md-8"></div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-5">
+  <div class="row container-fluid mt-5 pt-5">
+    <div class="col-md-6 pt-2">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title text-center">Add Note</h2>
+          <form [formGroup]="notesForm">
+            <div class="form-group row mb-3">
+              <label for="title" class="col-sm-3 col-form-label form-label"
+                >Title <span class="text-danger">*</span></label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  id="title"
+                  class="form-control"
+                  formControlName="title"
+                  [ngClass]="{
+                    'is-invalid': notesForm.controls['title'].errors && ckDep
+                  }"
+                  required
+                />
+                <small
+                  *ngIf="notesForm.controls['title'].errors && ckDep"
+                  class="text-danger"
+                  >Enter Your Title</small
+                >
+              </div>
+            </div>
+            <div class="form-group row mb-3">
+              <label for="content" class="col-sm-3 col-form-label form-label"
+                >Content <span class="text-danger">*</span></label
+              >
+              <div class="col-sm-9">
+                <textarea
+                  id="content"
+                  class="form-control"
+                  formControlName="content"
+                  [ngClass]="{
+                    'is-invalid': notesForm.controls['content'].errors && ckDep
+                  }"
+                  required
+                ></textarea>
+                <small
+                  *ngIf="notesForm.controls['content'].errors && ckDep"
+                  class="text-danger"
+                  >Enter Your Content</small
+                >
+              </div>
+            </div>
+            <div class="form-group row mb-3">
+              <label for="date" class="col-sm-3 col-form-label form-label"
+                >Date <span class="text-danger">*</span></label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="date"
+                  id="date"
+                  class="form-control"
+                  formControlName="date"
+                  [ngClass]="{
+                    'is-invalid': notesForm.controls['date'].errors && ckDep
+                  }"
+                  required
+                />
+                <small
+                  *ngIf="notesForm.controls['date'].errors && ckDep"
+                  class="text-danger"
+                  >Enter Your Date</small
+                >
+              </div>
+            </div>
+            <div class="text-left mb-3">
+              <label
+                for="discussionTopic"
+                class="col-sm-3 col-form-label form-label"
+              ></label>
+              <button
+                *ngIf="!data"
+                class="btn btn-submit mx-2"
+                (click)="AddNotes()"
+              >
+                Submit
+              </button>
+              <button
+                *ngIf="data"
+                class="btn btn-submit mx-1"
+                (click)="updatenotes()"
+              >
+                Update
+              </button>
+              <button class="btn btn-cancel mx-1" (click)="cancel()">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2024 Kaushik Design. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>

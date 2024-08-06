@@ -1,0 +1,100 @@
+
+
+   .iconify{
+            padding:2px;
+            background-color:#deebfd;
+   }
+
+
+   .carousel-inner{
+    background-color: #99a8c5;
+                   /* background-image: url("../../assets/hero-bg.jpg"); */
+                   height:100%;
+                   width:100%;
+   }
+   .d-block{
+             width:10%;
+            margin-left:45%;
+            margin-bottom:15%;
+            margin-top:10%;
+       
+   }
+
+  .homeTitle{
+    color: black;
+  }
+   /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .btn-submit {
+    background-color:#d3663b;
+    border-color:#99a8c5;
+    color: #ffffff;
+    padding: 6px 12px !important;
+    background-image: none;
+    border-radius: 5px;
+    float: right;
+    text-align: right;
+    justify-content: right;
+  }
+  
+  .btn-submit:hover {
+    background-color: lightgreen;
+    border-color: lightgreen;
+  }
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #b6b2b4;
+    color: black;
+    font-weight: 600;
+    box-shadow: 0 1rem 1rem rgba(198, 193, 193, 0.18) !important;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+  .mat-toolbar.mat-primary{
+    background-color: #b6b2b4;
+  }
+  .footer {
+    background-color: #b6b2b4;
+    color: black;
+    padding: 10px 0;
+  }
+  body{
+    background-color: gray;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
